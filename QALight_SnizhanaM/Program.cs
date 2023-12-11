@@ -19,6 +19,13 @@ namespace Lesson1
 
             int result = Sum("10", "20");
             Console.WriteLine($"The result of the method Sum is {result}.");
+
+            
+
+
+            //Arithmetic operations. Part 2.
+            double averageNumberResult = AverageNumber(7, 9, 23.5);
+            Console.WriteLine($"The Arithmetic Mean is {averageNumberResult}.");
         }
 
         public static int Sum(string firstNumber, string secondNumber)
@@ -28,6 +35,27 @@ namespace Lesson1
             return firstInt + secondInt;
         }
 
+        //Arithmetic operations. Part 1.
+        public static void MathOperations(double numberOne, double numberTwo)
+        {
+            numberOne = 12;
+            numberTwo = 27;
+            double addition = numberOne + numberTwo;
+            Console.WriteLine($"Result of addition is {addition}.");
 
+            double subtraction = numberOne - numberTwo;
+            Console.WriteLine($"Result of subtraction is {subtraction}.");
+
+            double multiplication = numberTwo * numberOne;
+            Console.WriteLine($"Result of multiplication is {multiplication}.");
+
+            double division = numberTwo / numberOne;
+            Console.WriteLine($"Result of division is {division}.");
+        }
+    public static double AverageNumber(double a, double b, double c)
+    {
+        return (a + b + c) / 3;
     }
+    }
+
 }
