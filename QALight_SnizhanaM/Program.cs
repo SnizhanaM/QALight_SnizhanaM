@@ -1,5 +1,6 @@
 ﻿using QALight_SnizhanaM;
 using System;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Lesson1
@@ -16,6 +17,7 @@ namespace Lesson1
 
             Console.WriteLine($"Student's name is {studentName}. {studentName} is {studentAge} years old. Her average grade is {averageGrade}.\n");
 
+          
             //Variables and data types. Part 2.
 
             int result = Sum("10", "20");
@@ -57,6 +59,35 @@ namespace Lesson1
 
             //Classes and methods. Part 4.
             twoNumbersAddition("67", "89");
+
+            //HOMEWORK2. WORK WITH STRINGS
+            var workWithStrings = "HOMEWORK 2. PART 1. WORK WITH STRINGS.";
+            Console.WriteLine(workWithStrings);
+            var greeting = "Hello, How Are YoU?";
+            var splitGreeting = greeting.Split(',').Last();
+            Console.WriteLine(splitGreeting);
+
+            var trimSplitGreeting = splitGreeting.Trim();
+            Console.WriteLine(trimSplitGreeting);
+
+            var toLowerGreeting = trimSplitGreeting.ToLower();
+            Console.WriteLine(toLowerGreeting);
+
+            var cutHello = greeting.Substring(0, 5);
+            Console.WriteLine(cutHello);
+
+            //HOMEWORK2. CLASSES
+            var inheritance = "HOMEWORK 2. PART 2. WORK CLASSES.";
+            Console.WriteLine(inheritance);
+
+            var car = new Car();
+            var bike = new Bike();
+
+            var carService = new CarService();
+
+            carService.MakeService(car);
+            carService.MakeService(bike);
+
         }
 
         public static int Sum(string firstNumber, string secondNumber)
@@ -97,8 +128,12 @@ namespace Lesson1
         {
             int firstNumb = Convert.ToInt32(first); 
             int secondNumb = Convert.ToInt32(second);
-            Console.WriteLine(firstNumb + secondNumb);
+            Console.WriteLine($"{firstNumb + secondNumb} \n");
         }
+
+        
+
+        
     }
 
 }
