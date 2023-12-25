@@ -11,7 +11,7 @@ namespace Lesson1
 
         static void Main(string[] args)
         {
-            string studentName = "Sophia";
+            /*string studentName = "Sophia";
             int studentAge = 20;
             double averageGrade = 80.5;
 
@@ -80,17 +80,59 @@ namespace Lesson1
             var inheritance = "HOMEWORK 2. PART 2. WORK CLASSES.";
             Console.WriteLine(inheritance);
 
+            
             var car = new Car();
             var bike = new Bike();
 
             var carService = new CarService();
 
             carService.MakeService(car);
-            carService.MakeService(bike);
+            carService.MakeService(bike);*/
+            
+
+            //HOMEWORK 3.
+
+            
+
+            var boeing = new Boeing("Boeing 757-200", "982 km/h", "10760 meters", "1990");
+            boeing.ShowPlaneInfo();
+            Console.WriteLine($"{boeing}\n");
+            var yearOfIncident1 = boeing.GetYearOfIssue();
+            Console.WriteLine($"In {yearOfIncident1} the hijacked aircraft struck a parked China Southwest Airlines Boeing 707\n");
+
+
+
+
+            var airbus = new Airbus("Airbus A319-114", "871 km/h", "11168 meters", "2003");
+            airbus.ShowPlaneInfo();
+            Console.WriteLine($"{airbus}\n");
+            var yearOfIncident2 = airbus.GetYearOfIssue();
+            Console.WriteLine($"In {yearOfIncident2} was damaged by maintenance personnel");
+
+
+            var eurocopter = new Eurocopter_EC225_Super_Puma("passenger transport helicopter", "275.5 km/h", "5,900 m", "2023");
+            eurocopter.ShowHelicopterInfo();
+            Console.WriteLine($"{eurocopter}\n");
+            var yearOfHelicopterIncident1 = eurocopter.GetYearOfHelicopterIssue();
+            Console.WriteLine($"Eurocopter_EC225 crashed into a kindergarten in Brovary in {yearOfHelicopterIncident1}");
+
+            var chopper = new Chopper_6("Eurocopter AS-350 Astar", "289 km/h", "4,600 m", "2023");
+            chopper.ShowHelicopterInfo();
+            Console.WriteLine($"{chopper}\n");
+            var yearOfHelicopterIncident2 = chopper.GetYearOfHelicopterIssue();
+            Console.WriteLine($"Chopper 6 crashed into a wooded area of Burlington County, in New Jersey, in {yearOfHelicopterIncident2}");
+
+            var hangar = new Hangar();
+            hangar.AddFlyingTransport(boeing);
+            hangar.AddFlyingTransport(airbus);
+            hangar.AddFlyingTransport(eurocopter);
+            hangar.AddFlyingTransport(chopper);
+
+            
 
         }
 
-        public static int Sum(string firstNumber, string secondNumber)
+        /*public static int Sum(string firstNumber, string secondNumber)
         {
             int firstInt = Convert.ToInt32(firstNumber);
             int secondInt = Convert.ToInt32(secondNumber);
@@ -129,11 +171,11 @@ namespace Lesson1
             int firstNumb = Convert.ToInt32(first); 
             int secondNumb = Convert.ToInt32(second);
             Console.WriteLine($"{firstNumb + secondNumb} \n");
-        }
+        }*/
 
-        
 
-        
+
+
     }
 
 }
